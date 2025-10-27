@@ -9,6 +9,7 @@ Welcome to the Digital Ethos Academy AI-Driven Software Engineering Program. Thi
 
 Whether you are self-paced or teaching in a classroom, this README explains how the pieces fit together and how to get started quickly.
 
+
 ---
 
 ## 📦 Repository Layout
