@@ -1,4 +1,5 @@
 # AI-Driven Software Engineering Program
+## October 2025
 
 Welcome to the Digital Ethos Academy AI-Driven Software Engineering Program. This 10-day intensive curriculum shows software engineers how to weave large language models (LLMs) into every phase of the software development lifecycle (SDLC). The repository is the single source of truth for:
 
