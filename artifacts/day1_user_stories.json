@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "user_story": "As an Eager Contributor, I want a personalized learning path based on my role and experience so that I can quickly gain the most relevant knowledge and skills.",
+    "persona": "The Eager Contributor (New Hire)",
+    "acceptance_criteria": [
+      "Given I am a new hire with a specific role (e.g., Software Engineer) and prior experience, When I log into the onboarding tool, Then I see a learning path tailored to my profile.",
+      "Given I complete a module in my personalized learning path, When I mark it as done, Then my progress is updated, and the next relevant module is highlighted.",
+      "Given my role requires specific certifications, When I view my learning path, Then it includes modules or resources relevant to achieving those certifications."
+    ]
+  },
+  {
+    "id": 2,
+    "user_story": "As an Onboarding Orchestrator, I want a dashboard to track new hire progress through onboarding tasks and learning modules so that I can proactively identify and support those who are falling behind.",
+    "persona": "The Onboarding Orchestrator (HR Onboarding Specialist)",
+    "acceptance_criteria": [
+      "Given I am an Onboarding Orchestrator, When I access the HR dashboard, Then I see a list of all active new hires with their overall onboarding progress percentage.",
+      "Given a new hire has not completed a mandatory task by its due date, When I view their profile on the dashboard, Then the overdue task is highlighted, and I can send a reminder.",
+      "Given I want to understand overall onboarding efficiency, When I view the analytics section, Then I can see average completion times for different onboarding phases."
+    ]
+  },
+  {
+    "id": 3,
+    "user_story": "As a Team Integrator, I want to easily assign a mentor or buddy to my new team member so that they have a go-to person for informal guidance and feel integrated into the team faster.",
+    "persona": "The Team Integrator (Engineering Team Lead)",
+    "acceptance_criteria": [
+      "Given I am a Team Integrator with a new hire assigned to my team, When I access the new hire's profile in the tool, Then I see an option to assign a mentor or buddy.",
+      "Given I select an existing team member as a mentor, When I confirm the assignment, Then both the new hire and the mentor receive a notification about the pairing.",
+      "Given a mentor has been assigned, When the new hire views their welcome hub, Then the mentor's contact information and a suggested first meeting topic are displayed."
+    ]
+  },
+  {
+    "id": 4,
+    "user_story": "As an Eager Contributor, I want a searchable resource library so that I can independently find answers to my questions about company policies and tools.",
+    "persona": "The Eager Contributor (New Hire)",
+    "acceptance_criteria": [
+      "Given I am a new hire, When I navigate to the Resource Library, Then I see a search bar and categorized sections for documents.",
+      "Given I search for 'expense policy', When I type 'expense' into the search bar, Then relevant documents like 'Expense Reimbursement Policy' appear in the search results.",
+      "Given I click on a document in the Resource Library, When the document opens, Then I can read or download it."
+    ]
+  },
+  {
+    "id": 5,
+    "user_story": "As an Onboarding Orchestrator, I want a secure portal for new hires to complete and sign HR forms digitally so that I can streamline administrative tasks and ensure compliance.",
+    "persona": "The Onboarding Orchestrator (HR Onboarding Specialist)",
+    "acceptance_criteria": [
+      "Given I am an Onboarding Orchestrator, When I assign mandatory HR forms to a new hire, Then the new hire receives a notification to complete them in the digital portal.",
+      "Given a new hire completes and e-signs a form, When they submit it, Then the form is securely stored, and its completion status is updated in my dashboard.",
+      "Given I need to audit completed forms, When I access the digital document management section, Then I can view and download all submitted forms for a specific new hire."
+    ]
+  },
+  {
+    "id": 6,
+    "user_story": "As a Team Integrator, I want to see my new hire engage in role-relevant simulated projects so that I can assess their practical skills and accelerate their contribution to real work.",
+    "persona": "The Team Integrator (Engineering Team Lead)",
+    "acceptance_criteria": [
+      "Given I have assigned a simulated project to a new hire, When the new hire completes the project, Then I receive a notification and can review their submission within the tool.",
+      "Given a new hire is working on a simulated project, When I view their progress, Then I can see which stages they have completed and any outstanding tasks.",
+      "Given I review a completed simulated project, When I provide feedback, Then the new hire receives the feedback directly within the tool."
+    ]
+  }
+]

@@ -34,8 +34,6 @@ Thumbs.db
 
 # Course-specific generated files
 # Ignore the entire artifacts directory as it contains generated outputs
-artifacts/
-app/
 tests/
 
 # Ignore build artifacts

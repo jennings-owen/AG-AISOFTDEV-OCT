@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "persona": "Casual Reader",
+    "user_story": "As a Casual Reader, I want to easily add books I've borrowed to my tracking list, so that I can keep a digital record of what I have out.",
+    "acceptance_criteria": [
+      "Given I am on the 'My Books' screen, When I tap the 'Add Book' button, Then I should be presented with options to add a book.",
+      "Given I choose to add a book manually, When I enter the book's title, author, and due date, Then the book should appear in my 'My Books' list with the entered details.",
+      "Given I choose to add a book via barcode scan, When I scan a book's ISBN barcode, Then the app should retrieve book details (title, author) and add it to my 'My Books' list, prompting for the due date."
+    ]
+  },
+  {
+    "id": 2,
+    "persona": "Student",
+    "user_story": "As a Student, I want to receive timely reminders for my borrowed books' due dates, so that I can avoid late fees and manage my study schedule effectively.",
+    "acceptance_criteria": [
+      "Given I have books with upcoming due dates, When a due date is approaching (e.g., 3 days before), Then I should receive a push notification on my device.",
+      "Given I receive a due date reminder notification, When I open the notification, Then it should take me to my 'My Books' list, highlighting the overdue/soon-due books.",
+      "Given I am in the app settings, When I adjust the reminder frequency (e.g., 1 day, 3 days, 7 days before), Then future reminders should adhere to my chosen frequency."
+    ]
+  },
+  {
+    "id": 3,
+    "persona": "Avid Reader",
+    "user_story": "As an Avid Reader, I want to get personalized book recommendations, so that I can discover new titles that align with my interests and past reads.",
+    "acceptance_criteria": [
+      "Given I have marked books as 'read' or provided genre preferences, When I navigate to the 'Recommendations' section, Then I should see a list of books suggested based on my input.",
+      "Given I interact with recommendations (e.g., 'like' a book, add to 'to-read'), When I revisit the 'Recommendations' section, Then the suggestions should adapt and improve over time.",
+      "Given I see a recommended book, When I tap on it, Then I should see its details (synopsis, author, genre) and an option to check its availability at the library."
+    ]
+  },
+  {
+    "id": 4,
+    "persona": "Parent",
+    "user_story": "As a Parent, I want to track books for multiple family members, so that I can manage all our library items from a single account.",
+    "acceptance_criteria": [
+      "Given I am in the app settings, When I create a new 'Child Profile' and assign a name, Then I should be able to switch between my profile and the child's profile.",
+      "Given I am adding a new book, When I select which profile the book belongs to, Then the book should appear under that specific profile's tracking list.",
+      "Given I am viewing the 'My Books' list, When I select a 'Family View' option, Then I should see a combined list of all books borrowed by all linked profiles, clearly indicating who borrowed which book."
+    ]
+  },
+  {
+    "id": 5,
+    "persona": "Student",
+    "user_story": "As a Student, I want to search the library's catalog directly from the app, so that I can quickly find specific books and check their availability.",
+    "acceptance_criteria": [
+      "Given I am on the 'Search' screen, When I enter a book title or author into the search bar, Then I should see a list of matching books from the library's catalog.",
+      "Given I see a search result, When I tap on a book, Then I should see its detailed information, including its current availability status (e.g., 'Available', 'On Loan') and its location within the library.",
+      "Given I am viewing search results, When I apply filters (e.g., 'Genre', 'Availability'), Then the results should update to show only books matching the applied filters."
+    ]
+  },
+  {
+    "id": 6,
+    "persona": "Casual Reader",
+    "user_story": "As a Casual Reader, I want to easily mark a book as returned, so that my tracking list accurately reflects what I currently have borrowed.",
+    "acceptance_criteria": [
+      "Given I am viewing my 'My Books' list, When I select a borrowed book, Then I should see an option to 'Mark as Returned'.",
+      "Given I tap 'Mark as Returned' for a specific book, When I confirm the action, Then the book should be removed from my active 'My Books' list and optionally moved to a 'Reading History' section.",
+      "Given a book is marked as returned, When I check my 'My Books' list, Then it should no longer appear there."
+    ]
+  },
+  {
+    "id": 7,
+    "persona": "Avid Reader",
+    "user_story": "As an Avid Reader, I want to rate books I've read, so that I can keep a personal record of my enjoyment and contribute to better recommendations.",
+    "acceptance_criteria": [
+      "Given I have a book in my 'Reading History' or 'My Books' list (if returned), When I select the book, Then I should see an option to 'Rate Book'.",
+      "Given I tap 'Rate Book', When I select a star rating (e.g., 1-5 stars), Then the rating should be saved and associated with that book in my profile.",
+      "Given I have rated a book, When I view the book's details again, Then my assigned rating should be visible."
+    ]
+  }
+]
