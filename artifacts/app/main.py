@@ -84,6 +84,13 @@ def get_db():
         db.close()
 
 # --- API Endpoints ---
+@app.get("/")
+def root():
+    """
+    Root endpoint that returns a simple OK message.
+    """
+    return {"message": "Ok"}
+
 @app.post("/users/", response_model=UserResponse, status_code=201)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     """
@@ -159,14 +166,15 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
     
     return {"detail": "User deleted successfully"}
 
-if __name__ == "__main__":
-    import uvicorn
+# Not used by docker deployment, but useful for local development
+# if __name__ == "__main__":
+#     import uvicorn
     
-    # Run the server with auto-reload for development
-    uvicorn.run(
-        "main:app",
-        host="127.0.0.1",
-        port=8000,
-        reload=True,
-        reload_dirs=["./"]
-    )
+#     # Run the server with auto-reload for development
+#     uvicorn.run(
+#         "main:app",
+#         host="127.0.0.1",
+#         port=3000,
+#         reload=True,
+#         reload_dirs=["./"]
+#     )
