@@ -32,10 +32,6 @@ Thumbs.db
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Course-specific generated files
-# Ignore the entire artifacts directory as it contains generated outputs
-tests/
-
 # Ignore build artifacts
 build/
 dist/
