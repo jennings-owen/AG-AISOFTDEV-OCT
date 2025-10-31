@@ -60,7 +60,7 @@ dockerfile
 Dockerfile
 
 # Root HTML entry that may be generated for demos
-index.html
+# index.html
 
 # Type checker and linter caches
 .mypy_cache/
