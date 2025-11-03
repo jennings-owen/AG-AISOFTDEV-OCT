@@ -1,145 +1,102 @@
-
-// Sidebar Component
 function Sidebar() {
-  const menuItems = [
-    { icon: "🏠", label: "Dashboard" },
-    { icon: "👤", label: "Profile" },
-    { icon: "📝", label: "Tasks" },
-    { icon: "📅", label: "Calendar" },
-    { icon: "❓", label: "Support" },
-  ];
-
   return (
-    <div className="flex flex-col bg-teal-600 h-full w-64 p-6 rounded-tr-lg">
-      <div className="text-white font-bold text-lg pb-6">Ascend</div>
-      <div className="space-y-4">
-        {menuItems.map((item) => (
-          <div
-            key={item.label}
-            className="flex items-center text-white py-2 px-3 rounded hover:bg-teal-700 cursor-pointer"
-          >
-            <span className="mr-2">{item.icon}</span>
-            {item.label}
-          </div>
-        ))}
-      </div>
-    </div>
+    <aside className="flex flex-col bg-blue-900 text-white w-1/4 p-4">
+      <h1 className="text-2xl mb-8">Ascend Onboarding Platform</h1>
+      <nav>
+        <ul>
+          {["Dashboard", "Learning Path", "Resources", "Profile"].map((item) => (
+            <li key={item} className="text-lg py-2 px-4 hover:bg-teal-500">{item}</li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
   );
 }
 
-// Header Component
-function Header() {
+function Header({ username }) {
   return (
-    <div className="flex justify-between items-center bg-navy-900 p-4 rounded-lg mb-8">
-      <div className="text-white font-bold">Onboarding Platform</div>
-      <div className="relative">
-        <button className="bg-gray-300 rounded-full h-10 w-10 flex items-center justify-center">
-          JD
-        </button>
-        {/* Dropdown Placeholder */}
-      </div>
-    </div>
+    <header className="flex justify-between items-center mb-8">
+      <h2 className="text-3xl font-bold">Welcome, {username}!</h2>
+      <div className="rounded-full bg-gray-300 w-10 h-10" />
+    </header>
   );
 }
 
-// WelcomeMessage Component
-function WelcomeMessage() {
+function WelcomeSection() {
   return (
-    <div className="text-center mb-8">
-      <h1 className="text-2xl font-bold mb-4">
-        Welcome to Ascend, Jane Doe!
-      </h1>
-      <button className="bg-teal-600 text-white py-3 px-6 rounded hover:bg-teal-700">
-        Start Your Journey
+    <section className="text-center mb-8">
+      <p className="text-lg">Let's get started on your journey with Ascend.</p>
+      <button className="mt-4 px-6 py-2 bg-teal-500 text-white rounded shadow hover:bg-teal-600">
+        Start Your Onboarding
       </button>
+    </section>
+  );
+}
+
+function ProgressTracker() {
+  return (
+    <div className="bg-white rounded shadow p-4 flex flex-col items-center">
+      <h3 className="font-semibold mb-2">User Progress Tracker</h3>
+      <div className="text-teal-500 text-2xl">60%</div>
+      <p>Onboarding Progress: 60% Complete</p>
     </div>
   );
 }
 
-// Card Component
-function Card({ title, children }) {
-  return (
-    <div className="bg-white shadow p-6 rounded flex-1">
-      <h2 className="font-bold mb-4">{title}</h2>
-      {children}
-    </div>
-  );
-}
-
-// UserProgress Component
-function UserProgress() {
-  return (
-    <Card title="User Progress">
-      <div className="flex items-center space-x-4">
-        <div className="w-16 h-16 rounded-full border-4 border-teal-600 flex items-center justify-center">
-          60%
-        </div>
-        <div>
-          <p>60% Complete</p>
-          <p>3/5 Modules done.</p>
-          <p>Next: Compliance Training</p>
-        </div>
-      </div>
-    </Card>
-  );
-}
-
-// InputForms Component
 function InputForms() {
-  const forms = ["Complete W-4 Tax Form", "Sign Company Handbook"];
-
   return (
-    <Card title="Input Forms">
-      <ul className="space-y-2">
-        {forms.map((form) => (
-          <li
-            key={form}
-            className="bg-gray-100 hover:bg-gray-200 p-3 rounded cursor-pointer"
-          >
-            {form}
-          </li>
-        ))}
-      </ul>
-    </Card>
+    <div className="bg-white rounded shadow p-4">
+      <h3 className="font-semibold mb-4">Input Forms</h3>
+      {["Personal Information", "Emergency Contact"].map((form) => (
+        <button key={form} className="flex justify-between items-center w-full p-2 mb-2 bg-teal-100 hover:bg-teal-200 rounded">
+          {form}
+        </button>
+      ))}
+    </div>
   );
 }
 
-// QuickTips Component
-function QuickTips() {
-  const resources = ["Security Guide", "IT Setup Checklist"];
-
+function TipsAndResources() {
   return (
-    <Card title="Quick Tips">
-      <p className="mb-4">💡 Set up your direct deposit early!</p>
-      <h3 className="font-bold mb-2">Resource Library</h3>
-      <ul className="space-y-2">
-        {resources.map((resource) => (
-          <li
-            key={resource}
-            className="bg-gray-100 hover:bg-gray-200 p-3 rounded cursor-pointer flex items-center justify-between"
-          >
-            {resource}
-          </li>
+    <div className="bg-white rounded shadow p-4">
+      <h3 className="font-semibold mb-4">Tips and Resources</h3>
+      <input type="text" placeholder="Search resources..." className="border rounded p-2 w-full mb-4" />
+      <div className="flex gap-4">
+        {["Policies", "Tools"].map((resource) => (
+          <div key={resource} className="flex-1 p-2 bg-gray-100 rounded text-center">{resource}</div>
         ))}
-      </ul>
-    </Card>
+      </div>
+    </div>
   );
 }
 
-// Dashboard Component
+function MentorInfo() {
+  return (
+    <div className="bg-white rounded shadow p-4 flex items-center">
+      <img src="#" alt="Mentor" className="w-12 h-12 rounded-full mr-4" />
+      <div>
+        <h4 className="font-semibold">Jane Doe - Your Mentor</h4>
+        <p>Contact: jane.doe@ascend.com</p>
+        <p>Suggested Topic: Team Introductions</p>
+      </div>
+    </div>
+  );
+}
+
 function Dashboard() {
   return (
-    <div className="h-screen flex bg-gray-100">
+    <div className="flex h-screen">
       <Sidebar />
-      <div className="flex-1 p-8">
-        <Header />
-        <WelcomeMessage />
-        <div className="flex justify-between space-x-4">
-          <UserProgress />
+      <main className="flex-1 p-8 bg-gray-100">
+        <Header username="Sarah" />
+        <WelcomeSection />
+        <div className="grid grid-cols-2 gap-8">
+          <ProgressTracker />
           <InputForms />
-          <QuickTips />
+          <TipsAndResources />
+          <MentorInfo />
         </div>
-      </div>
+      </main>
     </div>
   );
 }
@@ -150,5 +107,3 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(<Dashboard />);
 }
-
-// No ES module export needed for in-browser preview
